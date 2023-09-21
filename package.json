@@ -1,0 +1,14 @@
+{
+  "name": "coworking-tracking-app",
+  "version": "1.0.0",
+  "description": "This app helps you track coworking locations",
+  "main": "client/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "webpack": "^5.88.2"
+  }
+}
