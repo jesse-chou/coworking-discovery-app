@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const MONGO_URI = 'test';
+const MONGO_URI = "mongodb+srv://jessechou7:<codesmith>@starwars.cephl7x.mongodb.net/?retryWrites=true&w=majority";
 
 mongoose.connect(MONGO_URI, {
   useNewUrlParser: true,
@@ -18,8 +18,8 @@ const coworkingSchema = new Schema({
   id: Number,
   name: String,
   address: String,
-  hours: String,
-  wifiSpeed: String,
+  hours: Object,
+  wifiSpeed: Object,
   outlet: Boolean,
   restroom: Boolean
 })

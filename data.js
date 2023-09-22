@@ -1,11 +1,7 @@
 const exampleLocation = { 
-  id: '12345',
-  name: 'Devocion',
-  address: '123 Brooklyn Way',
-  wifiSpeed: {
-    down: 100, 
-    up: 50
-  },
+  id: '1',
+  name: 'Hungry Ghost Coffee',
+  address: '123 Bedford Ave',
   hours: {
     monday: '9-5pm',
     tuesday: '9-5pm',
@@ -14,6 +10,10 @@ const exampleLocation = {
     friday: '9-5pm',
     saturday: '10-6pm',
     sunday: '11-7pm'
+  },
+  wifiSpeed: {
+    down: 100, 
+    up: 50
   },
   outlet: true,
   restroom: true

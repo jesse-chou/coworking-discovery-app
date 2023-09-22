@@ -58,10 +58,15 @@ THEN I should be greeted with a home page that reads all existing location compo
 Technical Challenges:
 1. Figuring how to initialize MongoDB database and connect it via server.js
 2. Figuring how to connect all files and folders together. Don't know which files/folders are needed
+3. How to configure server.js and how to initialize the server
+4. Figuring out which npm modules to download and which to have as dev dependencies
+5. Figuring how to initialize .env file?
+6. Figuring out the relationship between App.jsx, index.html, and index.js
+7. Figuring out what the relationship betweeen 
 
 Wins By Day: 
 9-20-23: Got Github Repo setup and submitted project brief. Also completed Figma simple mockup. Have "very" basic folder structure setup as well
-9-21-23: TBD
+9-21-23: Got webpack.config setup successfully and am able to load App component on localhost:8080 dev server. Additionally, got package.json and dependencies installed. 
 
 Unknowns/Clarifying Questions: 
 1. Difference between MongoDB clusters vs database?
@@ -69,3 +74,4 @@ Unknowns/Clarifying Questions:
   2. Can I use the starwars cluster and just create another coworking database on that cluster?
 2. What should be inside gitignore?
 3. Do I need to download all node modules so it can be attached via package.json? Such as react or webpack
+4. What's the relationship between App.jsx, index.html, and index.js
