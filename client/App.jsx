@@ -1,11 +1,10 @@
 import React, { useState, useEffect }from 'react';
 import { createRoot } from 'react-dom/client';
-import Header from '../client/components/Header';
+import Header from '../client/components/Header.jsx';
 
 const App = () => {
   return (
-    <div id='app'>
-      <h1>Hello</h1>
+    <div>
       <Header/>
     </div>
   )

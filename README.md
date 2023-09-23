@@ -62,11 +62,14 @@ Technical Challenges:
 4. Figuring out which npm modules to download and which to have as dev dependencies
 5. Figuring how to initialize .env file?
 6. Figuring out the relationship between App.jsx, index.html, and index.js
-7. Figuring out what the relationship betweeen 
+7. Figuring out what the relationship betweeen components are. 
+8. Having a webpack issue not building my app
+  8.1 The answer was that import 
 
 Wins By Day: 
 9-20-23: Got Github Repo setup and submitted project brief. Also completed Figma simple mockup. Have "very" basic folder structure setup as well
 9-21-23: Got webpack.config setup successfully and am able to load App component on localhost:8080 dev server. Additionally, got package.json and dependencies installed. 
+9-22-23: Built basic header in App.jsx for front end component. Figured out the webpack build issue -> Import statements need the .jsx extension at the end
 
 Unknowns/Clarifying Questions: 
 1. Difference between MongoDB clusters vs database?

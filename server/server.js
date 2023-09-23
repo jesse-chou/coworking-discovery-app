@@ -24,7 +24,6 @@ app.get('/', (req, res) => {
   return res.status(200)
 })
 
-
 // conditional to check if the node env is in production
 if (process.env.NODE_ENV === 'production') {
   // statically serve everything in the build folder on the route '/build'
@@ -39,4 +38,4 @@ app.listen(PORT, () => {
   console.log(`Server listening on Port ${PORT}`)
 })
 
-module.export = app
+module.exports = { app }
