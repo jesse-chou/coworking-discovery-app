@@ -1,11 +1,12 @@
 import React, { useState, useEffect }from 'react';
-import { createRoot } from 'react-dom/client'
-
+import { createRoot } from 'react-dom/client';
+import Header from '../client/components/Header';
 
 const App = () => {
   return (
-    <div>
-      <h1>Hello, Test</h1>
+    <div id='app'>
+      <h1>Hello</h1>
+      <Header/>
     </div>
   )
 }
