@@ -1,33 +1,42 @@
-const mongoose = require('mongoose');
-
-const MONGO_URI = "mongodb+srv://jessechou7:<codesmith>@starwars.cephl7x.mongodb.net/?retryWrites=true&w=majority";
-
-mongoose.connect(MONGO_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true, 
-
-  dbName: 'CoworkingLocationsDatabase'
-})
-  .then(() => console.log('Connected to Mongo DB.'))
-  .catch(err => console.log(err))
+const mongoose = require('mongoose')
 
 const Schema = mongoose.Schema
 
 // sets a coworkingSchema for the 'coworkingLocation' collection
 const coworkingSchema = new Schema({
-  id: Number,
-  name: String,
-  address: String,
-  hours: Object,
-  wifiSpeed: Object,
-  outlet: Boolean,
-  restroom: Boolean
+  name: {
+    type: String,
+    required: true
+  },
+  address: {
+    type: String,
+    required: true
+  },
+  hours: {
+    monday: String,
+    tuesday: String,
+    wednesday: String,
+    thursday: String,
+    friday: String,
+    saturday: String,
+    sunday: String
+  },
+  wifiSpeed: {
+    down: Number,
+    up: Number
+  },
+  outlet: {
+    type: Boolean,
+    required: true
+  },
+  restroom: {
+    type: Boolean,
+    required: true
+  }
 })
 
 // creats a model for the 'coworkingLocation' collection that will be part of the export
 const coworkingLocation = mongoose.model('coworkingLocations', coworkingSchema)
 
 // export module to be used in controller
-module.exports = {
-  coworkingLocation
-}
+module.exports = coworkingLocation;

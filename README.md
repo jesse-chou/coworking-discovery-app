@@ -64,17 +64,67 @@ Technical Challenges:
 6. Figuring out the relationship between App.jsx, index.html, and index.js
 7. Figuring out what the relationship betweeen components are. 
 8. Having a webpack issue not building my app
-  8.1 The answer was that import 
+  8.1 The answer was that import statements need to have .jsx
+9. Figuring out how to make a 'Locations' collection and hook up my react components
+
 
 Wins By Day: 
 9-20-23: Got Github Repo setup and submitted project brief. Also completed Figma simple mockup. Have "very" basic folder structure setup as well
 9-21-23: Got webpack.config setup successfully and am able to load App component on localhost:8080 dev server. Additionally, got package.json and dependencies installed. 
 9-22-23: Built basic header in App.jsx for front end component. Figured out the webpack build issue -> Import statements need the .jsx extension at the end
+9-23-23: Got MongoDB database connected! Also figured out that you need to import React for components to avoid errors.
 
 Unknowns/Clarifying Questions: 
-1. Difference between MongoDB clusters vs database?
-  1. Am I only allowed one shared cluster through MongoAtlas?
-  2. Can I use the starwars cluster and just create another coworking database on that cluster?
-2. What should be inside gitignore?
-3. Do I need to download all node modules so it can be attached via package.json? Such as react or webpack
-4. What's the relationship between App.jsx, index.html, and index.js
+- What should be inside gitignore?
+- What's the relationship between App.jsx, index.html, and index.js
+- How do I add a new collection to CoworkingLocation database and add a new document to that collection 
+- What do I need in my .eslintrc.json file? What needs to be included and how do I find what I need?
+- How do I send example data to the database?
+- What's the relationaship between model, controller, and routes?
+- Is best practice to put the mongoDB connection in server.js or model.js?
+
+
+const exampleLocation = { 
+  id: '1',
+  name: 'Hungry Ghost Coffee',
+  address: '123 Bedford Ave',
+  hours: {
+    monday: '9-5pm',
+    tuesday: '9-5pm',
+    wednesday: '9-5pm',
+    thursday: '9-5pm',
+    friday: '9-5pm',
+    saturday: '10-6pm',
+    sunday: '11-7pm'
+  },
+  wifiSpeed: {
+    down: 100, 
+    up: 50
+  },
+  outlet: true,
+  restroom: true
+};
+
+json: 
+{ 
+  "name": "Hungry Ghost Coffee",
+  "address": "123 Bedford Ave",
+  "hours": {
+    "monday": "9-5pm",
+    "tuesday": "9-5pm",
+    "wednesday": "9-5pm",
+    "thursday": "9-5pm",
+    "friday": "9-5pm",
+    "saturday": "10-6pm",
+    "sunday": "11-7pm"
+  },
+  "wifiSpeed": {
+    "down": "100", 
+    "up": "50"
+  },
+  "outlet": "true",
+  "restroom": "true"
+};
+
+
+mongoose models -> create method
