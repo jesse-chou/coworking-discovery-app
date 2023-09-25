@@ -1,7 +1,8 @@
 const path = require('path');
 const express = require('express');
-const coworkingLocation = require('../server/models/coworkingLocationModels')
 const mongoose = require('mongoose');
+
+const coworkingLocation = require('../server/models/coworkingLocationModels')
 
 const app = express();
 
@@ -9,8 +10,10 @@ const apiRouter = require('./routes/api');
 
 const PORT = 3000;
 
-const MONGO_URI = "mongodb+srv://jessechou7:codesmith@starwars.cephl7x.mongodb.net/CoworkingLocationsDatabase?retryWrites=true&w=majority";
+// MongoDB connection string
+const MONGO_URI = "mongodb+srv://jessechou7:codesmith@starwars.cephl7x.mongodb.net/?retryWrites=true&w=majority";
 
+// Method to connect to MongoDB database
 mongoose.connect(MONGO_URI, {
   // options for the connect method to parse the URI
   useNewUrlParser: true,
@@ -27,16 +30,8 @@ app.use(express.urlencoded({ extended: true }));
 // requests for static files
 app.use(express.static(path.resolve(__dirname, '../client')))
 
-// define route handlers
+// define route handlers. Requests will go to /api/...
 app.use('/api', apiRouter);
-
-app.post('/api/create', async (req, res) => {
-  const x = await coworkingLocation.create(req.body);
-
-  console.log(x)
-
-  res.status(200).json('hello');
-})
 
 // catch all error
 app.use((req, res) => res.status(404).send("This is not what you were looking for!"))

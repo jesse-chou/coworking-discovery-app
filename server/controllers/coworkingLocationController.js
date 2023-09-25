@@ -1,14 +1,13 @@
-const models = require('../models/coworkingLocationModels');
+const CoworkingLocation = require('../models/coworkingLocationModels');
 
 const coworkingLocationController = {};
 
 coworkingLocationController.addLocation = async (req, res, next) => {
-  // write functionality to add location
-
-
-  await models.create(req.body);
+  // functionality to create the coworking location using the imported module and the passed in request
+  await CoworkingLocation.create(req.body);
   console.log(req.body);
 
+  // invoke the next middleware function in api.js
   return next();
 }
 
@@ -23,8 +22,10 @@ coworkingLocationController.getLocation = (req, res, next) => {
   return next();
 }
 
-coworkingLocationController.deleteLocation = (req, res, next) => {
-
+coworkingLocationController.deleteLocation = async (req, res, next) => {
+  // functionality to delete the reqbody
+  await CoworkingLocation.deleteOne(req.body)
+  
   return next();
 }
 

@@ -1,42 +1,30 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 
-const Schema = mongoose.Schema
+const Schema = mongoose.Schema;
 
 // sets a coworkingSchema for the 'coworkingLocation' collection
-const coworkingSchema = new Schema({
-  name: {
-    type: String,
-    required: true
-  },
-  address: {
-    type: String,
-    required: true
-  },
+const coworkingLocationSchema = new Schema({
+  name: { type: String, required: true },
+  address: { type: String, required: true },
   hours: {
-    monday: String,
-    tuesday: String,
-    wednesday: String,
-    thursday: String,
-    friday: String,
-    saturday: String,
-    sunday: String
+    monday: { type: String, required: true },
+    tuesday: { type: String, required: true },
+    wednesday: { type: String, required: true },
+    thursday: { type: String, required: true },
+    friday: { type: String, required: true },
+    saturday: { type: String, required: true },
+    sunday: { type: String, required: true }
   },
   wifiSpeed: {
-    down: Number,
-    up: Number
+    down: { type: Number, required: true },
+    up: { type: Number, required: true }
   },
-  outlet: {
-    type: Boolean,
-    required: true
-  },
-  restroom: {
-    type: Boolean,
-    required: true
-  }
+  outlet: { type: Boolean, required: true },
+  restroom: { type: Boolean, required: true }
 })
 
 // creats a model for the 'coworkingLocation' collection that will be part of the export
-const coworkingLocation = mongoose.model('coworkingLocations', coworkingSchema)
+const CoworkingLocation = mongoose.model('coworkingLocations', coworkingLocationSchema);
 
 // export module to be used in controller
-module.exports = coworkingLocation;
+module.exports = CoworkingLocation;
