@@ -27,9 +27,17 @@ module.exports = {
         }
       },
       {
-        test: /\.s?css/,
-        use: ['style-loader','css-loader', 'sass-loader']
+        test: /.(css|scss)$/,
+        exclude: /node_modules/,
+        use: ['style-loader', 'css-loader'],
       },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i, 
+        loader: 'file-loader',
+        options: {
+          name: '/public/icons/[name].[ext]'
+        }
+      }
     ]
   },
   plugins: [

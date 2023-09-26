@@ -1,10 +1,9 @@
 const path = require('path');
 const express = require('express');
+const app = express();
 const mongoose = require('mongoose');
 
 const coworkingLocation = require('../server/models/coworkingLocationModels')
-
-const app = express();
 
 const apiRouter = require('./routes/api');
 

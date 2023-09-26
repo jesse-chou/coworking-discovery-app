@@ -1,27 +1,31 @@
 const express = require('express');
 
-const coworkingLocationController = require('../controllers/coworkingLocationController');
-
 const router = express.Router();
 
+const CoworkingLocationController = require('../controllers/coworkingLocationController');
+
+// Route handler to create a new location through middleware functions
 router.post('/create',
-  coworkingLocationController.addLocation,
+  CoworkingLocationController.addLocation,
   (req, res) => res.status(200).json('Created Location')
 );
-
-router.put('/update',
-  coworkingLocationController.updateLocation,
-  (req, res) => res.status(200).json('Updated Location')
-);
-
-router.get('/retrieve',
-  coworkingLocationController.getLocation,
-  (req, res) => res.status(200).json('Got Location')
+ 
+// Route handler to get a location through middleware functions
+router.get('/:name',
+  CoworkingLocationController.getLocation,
+  (req, res) => res.status(200).json(res.locals.foundLocation)
 )
 
-router.delete('/delete',
-  coworkingLocationController.deleteLocation,
-  (req, res) => res.status(200).json('Deleted Location')
+// Route handler to update an existing location through middleware functions
+router.patch('/:name',
+  CoworkingLocationController.updateLocation,
+  (req, res) => res.status(200).json(res.locals.updatedLocation)
+);
+
+// Route handler to delete an existing location through middleware functions
+router.delete('/:name',
+  CoworkingLocationController.deleteLocation,
+  (req, res) => res.status(200).json('Location Deleted')
 )
 
 module.exports =  router;

@@ -66,6 +66,9 @@ Technical Challenges:
 8. Having a webpack issue not building my app
   8.1 The answer was that import statements need to have .jsx
 9. Figuring out how to make a 'Locations' collection and hook up my react components
+10. Figuring out why the mongoDB collection is created itself. 
+11. Figuring out how to "get" the data through findOne() when passing in the name in req.params.
+12. Figuring out how to update an existing location by grabbing the req params, finding it in the databse, and changing the name. Not only do I have to do this for name, but I also have to be able to update any of the fields
 
 
 Wins By Day: 
@@ -73,6 +76,8 @@ Wins By Day:
 9-21-23: Got webpack.config setup successfully and am able to load App component on localhost:8080 dev server. Additionally, got package.json and dependencies installed. 
 9-22-23: Built basic header in App.jsx for front end component. Figured out the webpack build issue -> Import statements need the .jsx extension at the end
 9-23-23: Got MongoDB database connected! Also figured out that you need to import React for components to avoid errors.
+9-24-23: Understand more deeply how schemas, models, and controllers connect. Esentially, the server will route the specific HTTP request to the api.js modile where It'll be routed to the corrected controller function. The controller function will create a new model by importing the model module before sending back a correct response to the client.
+9-25-23: Connected style.css to App.jsx. You need to have webpack successfully compile css and "load" it into the application for it to have access to the stylesheet. Also built out all the CRUD backend functionality
 
 Unknowns/Clarifying Questions: 
 - What should be inside gitignore?

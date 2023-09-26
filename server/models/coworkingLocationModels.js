@@ -23,7 +23,7 @@ const coworkingLocationSchema = new Schema({
   restroom: { type: Boolean, required: true }
 })
 
-// creats a model for the 'coworkingLocation' collection that will be part of the export
+// creates a model for the 'coworkingLocation' collection that will be part of the export
 const CoworkingLocation = mongoose.model('coworkingLocations', coworkingLocationSchema);
 
 // export module to be used in controller

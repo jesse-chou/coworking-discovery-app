@@ -1,0 +1,36 @@
+* {
+  font-family: 'Lato', sans-serif
+}
+
+/* Header Component */
+.header {
+  background-color: lightblue;
+}
+
+.nav {
+  display: flex;
+}
+
+.header .nav .ul {
+  display: flex;
+  gap: 2em;
+  margin-left: auto;
+  list-style-type: none;
+}
+
+.nav h1 {
+  font-size: 30px;
+}
+
+.header h1 h2 {
+  font-size: 40px;
+  padding: 10px;
+}
+
+
+/* Location Component */
+.location {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
