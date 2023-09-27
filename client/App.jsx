@@ -5,10 +5,10 @@ import Body from '../client/components/Body.jsx';
 
 const App = () => {
   return (
-    <>
+    <div className='main'>
       <Header/>
       <Body/>
-    </>    
+    </div>    
   )
 };
 

@@ -69,6 +69,7 @@ Technical Challenges:
 10. Figuring out why the mongoDB collection is created itself. 
 11. Figuring out how to "get" the data through findOne() when passing in the name in req.params.
 12. Figuring out how to update an existing location by grabbing the req params, finding it in the databse, and changing the name. Not only do I have to do this for name, but I also have to be able to update any of the fields
+13. Figuring out how to style react components. Having to figure out that I need a className for my overarching div element that holds my Header and Body components.
 
 
 Wins By Day: 
@@ -78,6 +79,7 @@ Wins By Day:
 9-23-23: Got MongoDB database connected! Also figured out that you need to import React for components to avoid errors.
 9-24-23: Understand more deeply how schemas, models, and controllers connect. Esentially, the server will route the specific HTTP request to the api.js modile where It'll be routed to the corrected controller function. The controller function will create a new model by importing the model module before sending back a correct response to the client.
 9-25-23: Connected style.css to App.jsx. You need to have webpack successfully compile css and "load" it into the application for it to have access to the stylesheet. Also built out all the CRUD backend functionality
+9-26-23: Implemented basic styling to the Header and Body components. Also added basic functionality when the user clicks on the plus sign, they are prompted with a popup modal
 
 Unknowns/Clarifying Questions: 
 - What should be inside gitignore?
@@ -87,6 +89,7 @@ Unknowns/Clarifying Questions:
 - How do I send example data to the database?
 - What's the relationaship between model, controller, and routes?
 - Is best practice to put the mongoDB connection in server.js or model.js?
+- What is the HTML plugin for?
 
 
 const exampleLocation = { 
