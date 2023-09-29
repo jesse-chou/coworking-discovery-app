@@ -1,12 +1,13 @@
 import React from "react";
-
+import Devocion from "../images/Devocion.jpg"
 
 const Location = () => {
   return (
     <div className="location">
-      <img src="./images/Devocion.jpg" alt="Cofee Shop"/>
+      <img src={Devocion} alt="Coffee Shop"/>
       <p>Name: <a href="">Hungry Ghost Coffee</a></p>
       <p>Address: <a href="">1 Brooklyn Way</a></p>
+      <p>Type: <a href="">Coffee Shop</a></p>
       <p>Hours: 
         <p>Monday: <a href="">9-5pm</a></p>
         <p>Tuesday: <a href="">9-5pm</a></p>
@@ -22,12 +23,14 @@ const Location = () => {
         <p>Up: <a href="">50</a> mbps</p>
       </p>
       <div>
-        <label for="outlet">Outlets: </label>
-        <input type="checkbox" id="outlet" name="outlet" />
+        Restrooms: ✓
       </div>
       <div>
-        <label for="restroom">Restrooms: </label>
-        <input type="checkbox" id="restroom" name="restroom" />
+        Outlets: ✓
+      </div>
+      <div className="locationEditButtons">
+        <button>EDIT</button>
+        <button>DELETE</button>
       </div>
     </div>
   )

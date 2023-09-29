@@ -6,6 +6,7 @@ const Schema = mongoose.Schema;
 const coworkingLocationSchema = new Schema({
   name: { type: String, required: true },
   address: { type: String, required: true },
+  locationType: { type: String, required: true},
   hours: {
     monday: { type: String, required: true },
     tuesday: { type: String, required: true },

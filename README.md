@@ -70,6 +70,8 @@ Technical Challenges:
 11. Figuring out how to "get" the data through findOne() when passing in the name in req.params.
 12. Figuring out how to update an existing location by grabbing the req params, finding it in the databse, and changing the name. Not only do I have to do this for name, but I also have to be able to update any of the fields
 13. Figuring out how to style react components. Having to figure out that I need a className for my overarching div element that holds my Header and Body components.
+14. Figuring out how to manage state in react to have each image show up with the appropriate data
+15. Figuring out how to store an image in a MongoDB database?
 
 
 Wins By Day: 
