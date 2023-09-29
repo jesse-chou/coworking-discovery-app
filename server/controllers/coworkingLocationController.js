@@ -6,10 +6,10 @@ const CoworkingLocationController = {};
 CoworkingLocationController.addLocation = async (req, res, next) => {
   // functionality to create the coworking location using the imported module and the passed in request
 
+  console.log(req.body)
   try {
     // create the new data in the CoworkingLocation database
     await CoworkingLocation.create(req.body)
-    console.log(req.body)
 
     // invoke the next middleware function in api.js
     return next()

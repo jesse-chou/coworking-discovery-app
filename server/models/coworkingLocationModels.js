@@ -20,8 +20,8 @@ const coworkingLocationSchema = new Schema({
     down: { type: Number, required: true },
     up: { type: Number, required: true }
   },
-  outlet: { type: Boolean, required: true },
-  restroom: { type: Boolean, required: true }
+  outlets: { type: Boolean, required: true },
+  restrooms: { type: Boolean, required: true }
 })
 
 // creates a model for the 'coworkingLocation' collection that will be part of the export

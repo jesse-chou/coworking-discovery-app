@@ -72,6 +72,7 @@ Technical Challenges:
 13. Figuring out how to style react components. Having to figure out that I need a className for my overarching div element that holds my Header and Body components.
 14. Figuring out how to manage state in react to have each image show up with the appropriate data
 15. Figuring out how to store an image in a MongoDB database?
+16. Figuring out react state again. It's been a while since React so figuring out how to handle user input and store the changed data
 
 
 Wins By Day: 
