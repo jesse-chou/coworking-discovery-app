@@ -1,10 +1,11 @@
 import React from "react";
+import Devocion from "../images/Devocion.jpg"
 
 const Header = () => {
   return (
     <header className='header' >
       <nav className='nav'>
-        <a href="" className="logo">Offispot</a>
+        <a href="" className="logo">OFFISPOT</a>
         <ul className="navLinks">
           <a href="">ABOUT</a>
           <a href="">LOGIN</a>

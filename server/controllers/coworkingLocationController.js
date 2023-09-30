@@ -31,14 +31,14 @@ CoworkingLocationController.getLocation = async (req, res, next) => {
 
   try {
     // declares a constant and sets it equal to the entire object that the name belongs to
-    const foundLocation = await CoworkingLocation.findOne({ name: name })
-    console.log(foundLocation)
+    const foundLocations = await CoworkingLocation.find({ })
+    console.log(foundLocations)
     // error handling
-    if (!foundLocation) {
+    if (!foundLocations) {
       res.status(404).json({ message: `Location cannot be found. Please try again`})
     }
     
-    res.locals.foundLocation = foundLocation;
+    res.locals.foundLocations = foundLocations;
     return next();
   }
 

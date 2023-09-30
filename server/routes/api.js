@@ -11,9 +11,9 @@ router.post('/create',
 );
  
 // Route handler to get a location through middleware functions
-router.get('/:name',
+router.get('/locations',
   CoworkingLocationController.getLocation,
-  (req, res) => res.status(200).json(res.locals.foundLocation)
+  (req, res) => res.status(200).json(res.locals.foundLocations)
 )
 
 // Route handler to update an existing location through middleware functions

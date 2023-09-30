@@ -73,6 +73,7 @@ Technical Challenges:
 14. Figuring out how to manage state in react to have each image show up with the appropriate data
 15. Figuring out how to store an image in a MongoDB database?
 16. Figuring out react state again. It's been a while since React so figuring out how to handle user input and store the changed data
+17. Figuring out how to get the data in the database and render each individual location component using GET request
 
 
 Wins By Day: 
@@ -83,6 +84,8 @@ Wins By Day:
 9-24-23: Understand more deeply how schemas, models, and controllers connect. Esentially, the server will route the specific HTTP request to the api.js modile where It'll be routed to the corrected controller function. The controller function will create a new model by importing the model module before sending back a correct response to the client.
 9-25-23: Connected style.css to App.jsx. You need to have webpack successfully compile css and "load" it into the application for it to have access to the stylesheet. Also built out all the CRUD backend functionality
 9-26-23: Implemented basic styling to the Header and Body components. Also added basic functionality when the user clicks on the plus sign, they are prompted with a popup modal
+9-27-23: Configured front end to allow user input through form creation
+9-28-23: Got POST request to work. Able to send data from the front end to the back end
 
 Unknowns/Clarifying Questions: 
 - What should be inside gitignore?
