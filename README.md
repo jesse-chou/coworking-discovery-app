@@ -85,7 +85,8 @@ Wins By Day:
 9-25-23: Connected style.css to App.jsx. You need to have webpack successfully compile css and "load" it into the application for it to have access to the stylesheet. Also built out all the CRUD backend functionality
 9-26-23: Implemented basic styling to the Header and Body components. Also added basic functionality when the user clicks on the plus sign, they are prompted with a popup modal
 9-27-23: Configured front end to allow user input through form creation
-9-28-23: Got POST request to work. Able to send data from the front end to the back end
+9-28-23: Got POST request to work. Able to send data from the front end to the back end. 
+9-29-23: Configured Front end to 'GET' the data from the database after client submits POST request
 
 Unknowns/Clarifying Questions: 
 - What should be inside gitignore?
@@ -96,6 +97,12 @@ Unknowns/Clarifying Questions:
 - What's the relationaship between model, controller, and routes?
 - Is best practice to put the mongoDB connection in server.js or model.js?
 - What is the HTML plugin for?
+
+Remaining Features:
+1. Style the location component
+2. Popup modal for adding a new location
+3. Build grid for location components (2x2)
+4. Delete popup modal
 
 
 const exampleLocation = { 
@@ -139,6 +146,3 @@ json:
   "outlet": "true",
   "restroom": "true"
 };
-
-
-mongoose models -> create method

@@ -100,7 +100,7 @@ CoworkingLocationController.deleteLocation = async (req, res, next) => {
   try {
     // declares a constant and sets it equal to the entire object that the name belongs to
     const foundLocation = await CoworkingLocation.findOne({ name: name })
-
+    console.log(foundLocation)
     // error handling
     if (!foundLocation) {
       res.status(404).json({ message: `Location cannot be found. Please try again`})

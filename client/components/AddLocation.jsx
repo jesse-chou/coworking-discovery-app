@@ -1,6 +1,9 @@
 import React, { useState } from "react";
+import { useLocationContext } from "../context/LocationContext";
 
 const AddLocation = () => {
+
+  const { dispatch } = useLocationContext();
 
   // Setting Initial State
   const [formData, setFormData] = useState({
@@ -54,6 +57,9 @@ const AddLocation = () => {
       });
 
       if (response.ok) {
+
+        dispatch({type: "ADD_LOCATION", payload: formData})
+
         setFormData({
           name: "",
           address: "",
