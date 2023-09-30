@@ -6,10 +6,10 @@ const Header = () => {
     <header className='header' >
       <nav className='nav'>
         <a href="" className="logo">OFFISPOT</a>
-        <ul className="navLinks">
+        {/* <ul className="navLinks">
           <a href="">ABOUT</a>
           <a href="">LOGIN</a>
-        </ul>
+        </ul> */}
       </nav>
       <h1>Work From Anywhere</h1>
       <h2>Track places to work remotely in NYC</h2>

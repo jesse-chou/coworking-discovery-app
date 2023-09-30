@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useLocationContext } from "../context/LocationContext.js";
+import AddLocation from "./AddLocation.jsx";
+import AddLocationButton from "./AddLocationButton.jsx"
 
 const Location = () => {
 
   const { state, dispatch } = useLocationContext();
   const { locations } = state;
-  // const [locations, setLocations] = useState([]);
 
   useEffect(() => {
     async function fetchLocations() {
@@ -41,7 +42,6 @@ const Location = () => {
     }
   }
 
-
   return (
     <div className="location">
       {locations.map((location) => (
@@ -49,37 +49,42 @@ const Location = () => {
           
           {/* <img src={location.image} /> */}
 
-          <p>Name: {location.name}</p>
-          <p>Address: {location.address}</p>
-          <p>Type: {location.locationType}</p>
+          <p><b>Name:</b> {location.name}</p>
+          <p><b>Address:</b> {location.address}</p>
+          <p><b>Type:</b> {location.locationType}</p>
 
           <div className="getHours">
-            <p>Hours</p>
-            <p>Monday: {location.hours.monday}</p>
-            <p>Tuesday: {location.hours.tuesday}</p>
-            <p>Wednesday: {location.hours.wednesday}</p>
-            <p>Thursday: {location.hours.thursday}</p>
-            <p>Friday: {location.hours.friday}</p>
-            <p>Saturday: {location.hours.saturday}</p>
-            <p>Sunday: {location.hours.sunday}</p>
+            <h3><u>Hours</u></h3>
+            <p><b>Monday:</b> {location.hours.monday}</p>
+            <p><b>Tuesday:</b> {location.hours.tuesday}</p>
+            <p><b>Wednesday:</b> {location.hours.wednesday}</p>
+            <p><b>Thursday:</b> {location.hours.thursday}</p>
+            <p><b>Friday:</b> {location.hours.friday}</p>
+            <p><b>Saturday:</b> {location.hours.saturday}</p>
+            <p><b>Sunday:</b> {location.hours.sunday}</p>
           </div>
 
           <div className="getWifiSpeed">
-            <p>WifiSpeed</p>
-            <p>Down: {location.wifiSpeed.down}</p>
-            <p>Up: {location.wifiSpeed.up}</p>
+            <h3><u>Wifi Speed</u></h3>
+            <p><b>Down:</b> {location.wifiSpeed.down} mbps</p>
+            <p><b>Up:</b> {location.wifiSpeed.up} mbps</p>
           </div>
-
-          <p>Restrooms: {location.restrooms ? "✓" : "✗"}</p>
-          <p>Outlets: {location.outlets ? "✓" : "✗"}</p>
-
+          <br />
+          <p><b>Restrooms</b> {location.restrooms ? "✓" : "✗"}</p>
+          <p><b>Outlets:</b> {location.outlets ? "✓" : "✗"}</p>
+          <br />
           <div className="locationEditButtons">
             <button>EDIT</button>
             <button onClick={() => handleDeleteLocation(location.name)}>DELETE</button>
           </div>
         </div>
       ))}
+      {/* <div>
+        <AddLocationButton/>
+      </div> */}
+        
     </div>
+
   );
 }
 

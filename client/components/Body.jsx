@@ -6,8 +6,8 @@ import AddLocation from "./AddLocation.jsx";
 const Body = () => {
   return (
     <>
-      <AddLocation/>
       <Location/>
+      <AddLocation/>
       {/* <AddLocationButton/> */}
     </>
   )

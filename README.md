@@ -74,6 +74,7 @@ Technical Challenges:
 15. Figuring out how to store an image in a MongoDB database?
 16. Figuring out react state again. It's been a while since React so figuring out how to handle user input and store the changed data
 17. Figuring out how to get the data in the database and render each individual location component using GET request
+18. Figuring out how to use react context api to manage state globally
 
 
 Wins By Day: 

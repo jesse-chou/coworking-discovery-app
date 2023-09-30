@@ -77,10 +77,9 @@ const AddLocation = () => {
             down: "",
             up: ""
           },
-          restrooms: "",
-          outlets: ""
+          restrooms: false,
+          outlets: false
         });
-        alert("Location added successfully");
       } else {
         alert("Failed to add location")
       }
@@ -97,7 +96,7 @@ const AddLocation = () => {
 
         {/* Name Input */}
         <label htmlFor="name">
-          Name:
+          <b>Name: </b>
           <input
             type="text"
             id="name" 
@@ -111,7 +110,7 @@ const AddLocation = () => {
 
         {/* Address Input */}
         <label htmlFor="address">
-          Address: 
+          <b>Address: </b>
           <input 
             type="text"
             id="address"
@@ -125,7 +124,7 @@ const AddLocation = () => {
 
         {/* Location Type Input */}
         <label htmlFor="locationType">
-          Type:
+          <b>Type: </b>
           <select 
           type="text"
           id="locationType" 
@@ -143,9 +142,9 @@ const AddLocation = () => {
         
         {/* Hours Input */}        
         <div className="hours">
-          <p>Hours</p>
+          <p><b>Hours</b></p>
           <label htmlFor="hours">
-            Monday:
+            <b>Monday:</b>
             <input 
             type="text"
             id="hoursMonday"
@@ -156,7 +155,7 @@ const AddLocation = () => {
             placeholder="Enter the hours"  
             required
             />
-            Tuesday:
+            <b>Tuesday:</b>
             <input 
             type="text"
             id="hoursTuesday"
@@ -167,7 +166,7 @@ const AddLocation = () => {
             placeholder="Enter the hours"
             required
             />
-            Wednesday:
+            <b>Wednesday</b>
             <input 
             type="text"
             id="hoursWednesday"
@@ -178,7 +177,7 @@ const AddLocation = () => {
             placeholder="Enter the hours" 
             required
             />
-            Thursday:
+            <b>Thursday</b>
             <input 
             type="text"
             id="hoursThursday"
@@ -189,7 +188,7 @@ const AddLocation = () => {
             placeholder="Enter the hours"
             required
             />            
-            Friday:
+            <b>Friday</b>
             <input 
             type="text"
             id="hoursFriday"
@@ -200,7 +199,7 @@ const AddLocation = () => {
             placeholder="Enter the hours"
             required
             />               
-            Saturday:
+            <b>Saturday</b>
             <input 
             type="text"
             id="hoursSaturday"
@@ -211,7 +210,7 @@ const AddLocation = () => {
             placeholder="Enter the hours"
             required
             />               
-            Sunday:
+            <b>Sunday:</b>
             <input 
             type="text"
             id="hoursSunday"
@@ -227,9 +226,9 @@ const AddLocation = () => {
 
         {/* WifiSpeed Input */}
         <div className="wifiSpeed">
-          <p>Wifi Speed</p>
+          <p><b>Wifi Speed</b></p>
             <label htmlFor="wifiSpeed">
-              Down:
+            <b>Down:</b>
               <input 
               type="number"
               id="wifiDown"
@@ -237,13 +236,13 @@ const AddLocation = () => {
               onChange={(e) => {
                 handleInputChange(e, "wifiSpeed")
               }}
-              placeholder="Enter the wifi download speed" 
+              placeholder="Wifi Down in Mbps" 
               required
               />
             </label>
             
             <label htmlFor="">
-              Up:
+              <b>Up:</b>
               <input 
               type="number"
               id="wifiUp"
@@ -251,7 +250,7 @@ const AddLocation = () => {
               onChange={(e) => {
                 handleInputChange(e, "wifiSpeed")
               }}
-              placeholder="Enter the wifi upload speed" 
+              placeholder="Wifi Up in Mbps" 
               required
               />
             </label>
@@ -259,7 +258,7 @@ const AddLocation = () => {
 
         {/* Restrooms Input */}
         <label htmlFor="restrooms">
-          Restrooms:
+          <b>Restrooms:</b>
           <input 
             type="checkbox" 
             id="restrooms" 
@@ -274,7 +273,7 @@ const AddLocation = () => {
         
         {/* Outlets Input */}        
         <label htmlFor="outlets">
-          Outlets:
+          <b>Outlets:</b>
           <input 
             type="checkbox" 
             id="outlets" 

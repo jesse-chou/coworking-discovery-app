@@ -30,7 +30,7 @@ const locationReducer = (state, action) => {
   } 
 }
 
-export const LocationProvider = ({ children }) => { // Fixed typo in "LocationProvider"
+export const LocationProvider = ({ children }) => { 
   const [state, dispatch] = useReducer(locationReducer, initialState);
 
   return (
@@ -43,7 +43,7 @@ export const LocationProvider = ({ children }) => { // Fixed typo in "LocationPr
 export const useLocationContext = () => {
   const context = useContext(LocationContext);
   if (!context) {
-    throw new Error("useLocationContext must be used within a LocationProvider"); // Fixed typo in the error message
+    throw new Error("useLocationContext must be used within a LocationProvider"); 
   }
   return context;
 }

@@ -1,4 +1,4 @@
-import React, { useState, useEffect }from 'react';
+import React from 'react';
 import { createRoot } from 'react-dom/client';
 import Header from '../client/components/Header.jsx';
 import Body from '../client/components/Body.jsx';
@@ -11,8 +11,8 @@ const App = () => {
       <div className='main'>
         <Header/>
         <Body/>
-        <Footer/>
       </div>    
+      <Footer/>
     </LocationProvider>
   )
 };
